@@ -1,0 +1,175 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout"
+    android:paddingTop="140dp"
+    android:paddingBottom="140dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/collageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <!-- First Column -->
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Second Column -->
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Third Column -->
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal4"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal4"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal5"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageView8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal5"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <!-- Guidelines -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

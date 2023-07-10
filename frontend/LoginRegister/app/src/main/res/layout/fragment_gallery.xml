@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/emptyGalleryView"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/emptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_empty_gallery"
+            android:contentDescription="@string/gallery_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emptyImageView"
+            android:layout_marginTop="16dp"
+            android:text="@string/your_gallery_is_empty_start_adding_images"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/galleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add_image"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="-25dp"
+        android:contentDescription="@string/add_image"
+        android:text="@string/add_image"
+        android:visibility="gone"
+        app:backgroundTint="@color/base_color"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_add" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_delete_selection"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="-16dp"
+        android:contentDescription="@string/delete_selection"
+        android:text="@string/delete_selection"
+        android:visibility="gone"
+        app:backgroundTint="@color/base_color"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_move_selection"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="-76dp"
+        android:contentDescription="Move selection"
+        android:text="Move selection"
+        android:visibility="gone"
+        app:backgroundTint="@color/base_color"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_move_image" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        app:backgroundTint="@color/base_color"
+        android:layout_marginBottom="35dp"
+        android:clickable="true"
+        android:contentDescription="@string/none"
+        android:focusable="true"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_delete_collection"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="-80dp"
+        android:contentDescription="@string/delete_collection"
+        android:text="@string/delete_collection"
+        android:visibility="gone"
+        app:backgroundTint="@color/base_color"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_delete" />
+
+</RelativeLayout>

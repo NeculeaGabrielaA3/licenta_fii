@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/baseline_filter_alt_24"
+        android:title="Filter" />
+    <item
+        android:id="@+id/parameter"
+        android:icon="@drawable/baseline_tune_24"
+        android:title="Parameter" />
+    <item
+        android:id="@+id/other"
+        android:icon="@drawable/baseline_more_horiz_24"
+        android:title="Other" />
+</menu>

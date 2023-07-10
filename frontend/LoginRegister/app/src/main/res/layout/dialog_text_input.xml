@@ -1,0 +1,20 @@
+<!-- res/layout/dialog_text_input.xml -->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:id="@+id/edit_text"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/color_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:pointerIcon="hand"
+        android:text="Text Color"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

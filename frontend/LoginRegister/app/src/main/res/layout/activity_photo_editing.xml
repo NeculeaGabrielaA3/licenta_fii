@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/image_text_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_horizontal_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:menu="@menu/menu_top_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <HorizontalScrollView
+        android:id="@+id/bottom_navigation_horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bottom_navigation_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/filtersButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Filters"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/cropButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Crop"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/brightnessButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Brightness"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/saturationButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Saturation"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/blurButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Blur"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/addTextButton"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Add Text"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
