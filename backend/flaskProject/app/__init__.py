@@ -5,8 +5,6 @@ from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_sqlalchemy import SQLAlchemy
 
-AWS_ACCESS_KEY="AKIAZ2OAFKUCSFASLA6J"
-AWS_SECRET_KEY="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"
 S3_BUCKET_NAME="photobombimages"
 
 s3_client = boto3.client('s3',
