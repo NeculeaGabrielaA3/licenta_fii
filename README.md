@@ -1,2 +1,1 @@
-# licenta_fii
-lucrare licenta FII
+My Bachelor's degree thesis project, 'Photobomb', is a comprehensive exploration into the design, development, and implementation of a user-centric Android application written in Kotlin. This application allows users to create and edit photo collageseffortlessly on their mobile devices. The application architecture involves a front-end interface developed in Kotlin using Android Studio and a back-end developed using Flask, a micro-framework for Python. Notably, I integrated the app with Amazon S3 to ensure secure, scalable storage for user images.
